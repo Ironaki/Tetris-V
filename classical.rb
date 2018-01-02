@@ -265,8 +265,12 @@ end
 class Tetris
 
   # creates the window and starts the game
-  def initialize
-    @root = TetrisRoot.new
+  def initialize(neo=false)
+    if neo
+      @root = TetrisRoot.new(neo)
+    else
+      @root = TetrisRoot.new
+    end
     @timer = TetrisTimer.new
     set_board
     @running = true
@@ -288,7 +292,7 @@ class Tetris
   def key_bindings  
     @root.bind('n', proc {self.new_game}) 
 
-    @root.bind('p', proc {self.pause}) 
+    @root.bind('r', proc {self.pause}) 
 
     @root.bind('q', proc {exitProgram})
     
@@ -304,11 +308,11 @@ class Tetris
     @root.bind('w', proc {@board.rotate_counter_clockwise})
     @root.bind('Up', proc {@board.rotate_counter_clockwise}) 
     
-    @root.bind('space' , proc {@board.drop_all_the_way}) 
+    @root.bind('space' , proc {@board.drop_all_the_way})
   end
 
   def buttons
-    pause = TetrisButton.new('PAUSE (P)', 'lightcoral'){self.pause}
+    pause = TetrisButton.new('PAUSE (R)', 'lightcoral'){self.pause}
     pause.place(35, 110, 190, 10)
 
     new_game = TetrisButton.new('NEW GAME (N)', 'lightcoral'){self.new_game}

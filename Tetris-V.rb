@@ -6,20 +6,20 @@ def runTetris
   mainLoop
 end
 
-def runMyTetris
-  MyTetris.new
+def runNeoTetris
+  NeoTetris.new
   mainLoop
 end
 
 if ARGV.count == 0
-  runMyTetris
+  runNeoTetris
 elsif ARGV.count != 1
-  puts "usage: Tetris-V.rb [enhanced | original]"
-elsif ARGV[0] == "enhanced"
-  runMyTetris
-elsif ARGV[0] == "original"
+  puts "usage: Tetris-V.rb [neo | classical]"
+elsif ARGV[0] == "neo"
+  runNeoTetris
+elsif ARGV[0] == "classical"
   runTetris
 else
-  puts "usage: Tetris-V.rb [enhanced | original]"
+  puts "usage: Tetris-V.rb [neo | classical]"
 end
 

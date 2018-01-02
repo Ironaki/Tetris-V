@@ -1,9 +1,14 @@
 require 'tk'
 
 class TetrisRoot
-  def initialize
+  def initialize(neo = false)
+    if neo
     @root = TkRoot.new('height' => 720, 'width' => 500, 
-             'background' => 'azure') {title "Tetris-V"}    
+                       'background' => 'azure') {title "Tetris-V -- Neo"}
+    else
+    @root = TkRoot.new('height' => 720, 'width' => 500, 
+                       'background' => 'azure') {title "Tetris-V -- Classical"}
+    end
   end
 
   def bind(char, callback)
