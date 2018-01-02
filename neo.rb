@@ -22,8 +22,8 @@ class NeoPiece < Piece
                                 [[[1, 0], [1, -1], [0, 0], [-1, 1], [-1, 0]],
                                  [[0, 0], [0, -1], [0, 1], [1, 1], [-1, -1]]],
                                 rotations([[0, -1], [0, 1], [0, 0], [1, 0], [2, 0]]),
-                                rotations([[0, -1], [0, -2], [0, 0], [1, 0], [2, 0]])
-                               ]
+                                rotations([[0, -1], [0, -2], [0, 0], [1, 0], [2, 0]]),
+                                rotations([[0, -1], [0, 1], [0, 0], [1, 1], [1, -1]])]                             
 
   def self.next_piece (board)
     NeoPiece.new(All_My_Pieces.sample, board)
