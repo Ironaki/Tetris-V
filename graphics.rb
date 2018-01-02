@@ -35,7 +35,7 @@ end
 
 class TetrisCanvas
   def initialize
-    @canvas = TkCanvas.new('background' => 'cornsilk')
+    @canvas = TkCanvas.new('background' => 'white')
   end
 
   
@@ -45,8 +45,8 @@ class TetrisCanvas
   end
 
   def draw_grid(height, width, block_size)
-    (1..height/block_size-1).each{|r| TkcLine.new(@canvas, 0, 20*r, width, 20*r, :fill=>'grey60')}
-    (1..width/block_size-1).each{|r| TkcLine.new(@canvas, 20*r+3, 0, 20*r+3, height, :fill=>'grey60')}
+    (1..height/block_size-1).each{|r| TkcLine.new(@canvas, 0, 20*r, width, 20*r, :fill=>'grey90')}
+    (1..width/block_size-1).each{|r| TkcLine.new(@canvas, 20*r+3, 0, 20*r+3, height, :fill=>'grey90')}
   end
 
   def unplace
