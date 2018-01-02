@@ -38,23 +38,23 @@ class NeoBoard < Board
     @current_block = NeoPiece.next_piece(self)
     @score = 0
     @game = game
-    @delay = 500
+    @delay = 700
     @cheating = false
     @cheating_two = false
   end
 
   # Set cheating to true
   def cheat
-    if @score >= 100 and !@cheating and !@cheating_two
+    if @score >= 60 and !@cheating and !@cheating_two
       @cheating = true
-      @score -= 100
+      @score -= 60
     end
   end
 
   def cheat_two
-    if @score >= 75 and !@cheating_two and !@cheating
+    if @score >= 40 and !@cheating_two and !@cheating
       @cheating_two = true
-      @score -= 75
+      @score -= 40
     end
   end
   
@@ -105,14 +105,14 @@ class NeoTetris < Tetris
   # New keybindings for flip and cheat
   def neo_key_bindings
     @root.bind('u', proc {@board.flip})
-    @root.bind('x', proc {@board.cheat})
-    @root.bind('c', proc {@board.cheat_two})
+    @root.bind('k', proc {@board.cheat})
+    @root.bind('j', proc {@board.cheat_two})
   end
 
   def neo_buttons
-    cheat = TetrisButton.new('SIZE ONE PIECE (X)', 'lightgreen'){@board.cheat}
+    cheat = TetrisButton.new('SIZE ONE PIECE (K)', 'lightgreen'){@board.cheat}
     cheat.place(35, 150, 45, 670)
-    cheat_two = TetrisButton.new('SIZE TWO PIECE (C)', 'lightgreen'){@board.cheat_two}
+    cheat_two = TetrisButton.new('SIZE TWO PIECE (J)', 'lightgreen'){@board.cheat_two}
     cheat_two.place(35, 150, 305, 670)
   end
   

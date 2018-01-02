@@ -292,7 +292,7 @@ class Tetris
   def key_bindings  
     @root.bind('n', proc {self.new_game}) 
 
-    @root.bind('r', proc {self.pause}) 
+    @root.bind('e', proc {self.pause}) 
 
     @root.bind('q', proc {exitProgram})
     
@@ -312,7 +312,7 @@ class Tetris
   end
 
   def buttons
-    pause = TetrisButton.new('PAUSE (R)', 'lightcoral'){self.pause}
+    pause = TetrisButton.new('PAUSE (E)', 'lightcoral'){self.pause}
     pause.place(35, 110, 190, 10)
 
     new_game = TetrisButton.new('NEW GAME (N)', 'lightcoral'){self.new_game}
