@@ -1,0 +1,72 @@
+* Tetris-V
+
+Tetris-V is a Tetris game with normal pieces of size three to five, and cheat pieces of size one and two. Implemented with Ruby and tcl/tk library for GUI interface.
+
+Tetris-V has two modes.
+
+Classical Mode is the classical Tetris. It has 7 size-four pieces.
+
+Neo Mode has the following normal pieces:
+
+- 2 size-3 pieces
+- 7 size-4 pieces
+- 18 size-5 pieces.
+
+and two cheat pieces:
+
+- size-1 piece (cost 60 points) (Press "K")
+- size-2 piece (cost 40 points) (Press "J")
+
+** Installation
+
+Clone the repo.
+
+Tetris-V is only tested on MacOS, but it should work if the OS has Ruby installed with tcl/tk library. For MacOS, its easy to install Ruby 2.2.3 with tk using [[https://rvm.io/rvm/install][Ruby Version Manager]].
+
+#+BEGIN_SRC shell
+
+git clone https://github.com/Ironaki/Tetris-V.git
+rvm install ruby-2.2.3 --with-tcl --with-tk # Other Ruby version may has problem with tcl/tk library on MacOS
+rvm use 2.2.3
+
+# Test installation
+irb
+require "tk" # This command should return true
+
+#+END_SRC
+
+** Neo Mode
+
+Run Neo Mode:
+
+#+BEGIN_SRC shell
+
+ruby Tetris-V.rb neo
+
+#+END_SRC
+
+*** Neo Mode Demo
+
+[[./Demo/Neo.gif][NeoMode]]
+
+*** Cheat Piece of Size One
+
+[[./Demo/SizeOne.gif][SizeOne]]
+
+*** Cheat Piece of Size Two
+
+[[./Demo/SizeTwo.gif][SizeTwo]]
+
+** Classical Mode
+
+Run Classical Mode
+
+#+BEGIN_SRC shell
+
+ruby Tetris-V.rb classical
+
+#+END_SRC
+
+** Acknowledgement
+
+The classical mode and graphics code is adapted from course project for the Programming Language Course on Coursera offered by Dr. Dan Grossman from the University of Washington.
