@@ -1,10 +1,10 @@
 * Tetris-V
 
-Tetris-V is a Tetris game with normal pieces of size three to five, and cheat pieces of size one and two. Implemented with Ruby and tcl/tk library for GUI interface.
+Tetris-V is a Tetris game with normal pieces of size 3, 4 and 5, and cheat pieces of size 1 and 2. Implemented with Ruby and tcl/tk library for GUI interface.
 
 Tetris-V has two modes.
 
-Classical Mode is the classical Tetris. It has 7 size-four pieces.
+Classical Mode is the original Tetris. It has 7 size-4 pieces.
 
 Neo Mode has the following normal pieces:
 
@@ -35,6 +35,16 @@ require "tk" # This command should return true
 
 #+END_SRC
 
+** Classical Mode
+
+Run Classical Mode:
+
+#+BEGIN_SRC shell
+
+ruby Tetris-V.rb classical
+
+#+END_SRC
+
 ** Neo Mode
 
 Run Neo Mode:
@@ -47,25 +57,16 @@ ruby Tetris-V.rb neo
 
 *** Neo Mode Demo
 
-[[./Demo/Neo.gif][NeoMode]]
+[[https://github.com/Ironaki/Tetris-V/edit/master/README.org][file:./Demo/Neo.gif]]
+
 
 *** Cheat Piece of Size One
 
-[[./Demo/SizeOne.gif][SizeOne]]
+[[https://github.com/Ironaki/Tetris-V/edit/master/README.org][file:./Demo/SizeOne.gif]]
 
 *** Cheat Piece of Size Two
 
-[[./Demo/SizeTwo.gif][SizeTwo]]
-
-** Classical Mode
-
-Run Classical Mode
-
-#+BEGIN_SRC shell
-
-ruby Tetris-V.rb classical
-
-#+END_SRC
+[[https://github.com/Ironaki/Tetris-V/edit/master/README.org][file:./Demo/SizeTwo.gif]]
 
 ** Acknowledgement
 
